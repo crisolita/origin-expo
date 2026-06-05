@@ -1,0 +1,454 @@
+﻿:host {
+  display: block;
+  min-height: 100vh;
+  background: #f5f4f1;
+  color: #374151;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f5f4f1;
+  --country: #063932;
+  --mat: #ffffff;
+  --line: #b18f2d;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  padding: 40px;
+  margin: 0;
+}
+
+.passport-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(16px, 4vw, 48px);
+}
+
+.passport-card {
+  width: min(100%, 560px);
+  background: #ffffff;
+  box-shadow: 0 18px 45px rgba(35, 33, 26, 0.12);
+  overflow: hidden;
+}
+
+.section-pad {
+  padding-inline: clamp(22px, 6vw, 40px);
+}
+
+.passport-header {
+  padding-top: clamp(30px, 6vw, 40px);
+  padding-bottom: clamp(24px, 5vw, 32px);
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand-logo {
+  margin: 0;
+  color: #063932;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(30px, 7vw, 38px);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.brand-subtitle,
+.passport-type,
+.meta-label,
+.field-label,
+.status-text,
+.hash-label {
+  text-transform: uppercase;
+}
+
+.brand-subtitle {
+  margin: 6px 0 0;
+  color: #b18f2d;
+  font-size: 9px;
+  letter-spacing: 0.25em;
+}
+
+.passport-type {
+  margin: 0;
+  color: #6b7280;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+  text-align: right;
+}
+
+.passport-type span {
+  display: block;
+}
+
+.passport-hero {
+  padding-top: clamp(26px, 5vw, 32px);
+  padding-bottom: clamp(26px, 5vw, 32px);
+  border-bottom: 1px solid #f1f2f3;
+}
+
+.piece-name {
+  margin: 0;
+  color: #063932;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: clamp(38px, 9vw, 48px);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.12;
+}
+
+.collection-name {
+  margin: 12px 0 20px;
+  color: #6b7280;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.gold-line {
+  width: 32px;
+  height: 2px;
+  background: #b18f2d;
+}
+
+.meta-grid {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f1f2f3;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.meta-label {
+  margin: 0 0 7px;
+  color: #b18f2d;
+  font-size: 9px;
+  letter-spacing: 0.11em;
+  line-height: 1.35;
+}
+
+.meta-value {
+  margin: 0;
+  color: #063932;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.fields {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.field-row {
+  padding: 16px 0;
+  border-bottom: 1px solid #f1f2f3;
+  display: flex;
+  gap: 24px;
+}
+
+.field-row:last-child {
+  border-bottom: 0;
+}
+
+.field-label-wrap {
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.field-label {
+  margin: 0;
+  color: #6b7280;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  line-height: 1.45;
+}
+
+.field-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.field-text {
+  margin: 0;
+  color: #374151;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.65;
+}
+
+/* ========================================================================== */
+.hierarchy-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+.country-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.country-node {
+  background: #ffffff !important;
+  color: #063932 !important;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 11px;
+  text-transform: uppercase;
+  z-index: 2;
+  min-width: 110px;
+  text-align: center;
+  position: relative;
+  border-left: 4px solid #b18f2d;
+  box-shadow: 0 4px 14px rgba(35, 33, 26, 0.06) !important;
+}
+.country-node::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 25px;
+  height: 2px;
+  background: var(--line);
+  z-index: 1;
+}
+.country-group::before {
+  display: none !important;
+}
+.country-group::before,
+.material-list::before,
+.material-list li::before {
+  content: '';
+  position: absolute;
+  background: #063932;
+}
+
+.country-group::before {
+  left: 120px;
+  top: 50%;
+  width: 25px;
+  height: 2px;
+  z-index: 1;
+}
+
+.material-list::before {
+  left: 12px;
+  top: 14px;
+  bottom: 14px;
+  width: 2px;
+}
+.material-list {
+  list-style: none;
+  padding-left: 25px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  justify-content: center;
+}
+
+.material-list:has(li:only-child)::before {
+  display: none;
+}
+
+.material-list li {
+  position: relative;
+  background: var(--mat);
+  color: var(--country);
+  padding: 6px 14px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  border: 1px solid #b18f2d;
+  min-width: 140px;
+}
+
+.material-list li::before {
+  left: -13px;
+  top: 50%;
+  width: 13px;
+  height: 2px;
+}
+
+.material-list li:only-child::before {
+  left: -25px;
+  width: 25px;
+}
+
+/* ========================================================================== */
+.chain {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  border-top: 1px solid #f1f2f3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.hash-line {
+  margin: 0;
+  color: #6b7280;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.hash-label {
+  letter-spacing: 0.1em;
+}
+
+.mono {
+  color: #b18f2d;
+  font-family: 'Courier New', monospace;
+}
+
+.dot-separator {
+  margin-inline: 8px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #10b981;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
+}
+
+.status-text {
+  margin: 0;
+  color: #0b8f65;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+}
+
+.verify {
+  padding-top: 8px;
+  padding-bottom: 32px;
+}
+
+.verify-button {
+  display: inline-block;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+  background: #063932;
+  color: #ffffff;
+  box-shadow: 0 12px 24px rgba(6, 57, 50, 0.2);
+  cursor: pointer;
+}
+
+.verify-button:focus-visible {
+  outline: 3px solid rgba(177, 143, 45, 0.45);
+  outline-offset: 3px;
+}
+
+.verify-button span {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.developer-note {
+  margin: 12px 0 0;
+  color: #9ca3af;
+  font-size: 9px;
+  font-style: italic;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .passport-shell {
+    align-items: flex-start;
+  }
+
+  .passport-header {
+    flex-direction: column;
+  }
+
+  .passport-type {
+    text-align: left;
+  }
+
+  .meta-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .field-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .field-label-wrap {
+    width: auto;
+  }
+
+  .chain {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .status {
+    justify-content: flex-start;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 420px) {
+  .section-pad {
+    padding-inline: 20px;
+  }
+
+  .brand-subtitle,
+  .collection-name {
+    letter-spacing: 0.16em;
+  }
+
+  .meta-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .hash-line {
+    display: grid;
+    gap: 4px;
+  }
+
+  .dot-separator {
+    display: none;
+  }
+}

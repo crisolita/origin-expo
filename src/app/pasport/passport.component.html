@@ -1,0 +1,154 @@
+﻿@if (passport()) {
+  <main class="passport-shell" aria-label="Pasaporte digital de pieza ORIGEN">
+    <article class="passport-card">
+      <header class="passport-header section-pad">
+        <div>
+          <h1 class="brand-logo">ORIGEN</h1>
+          <p class="brand-subtitle">Fashion Blockchain Entity</p>
+        </div>
+
+        <p class="passport-type">
+          <span>Pasaporte Digital</span>
+          <span>de Pieza</span>
+        </p>
+      </header>
+
+      <section class="passport-hero section-pad" aria-labelledby="piece-title">
+        <h2 id="piece-title" class="piece-name">{{ formatPieceName(passport()!.piece.name) }}</h2>
+        <p class="collection-name">{{ passport()!.piece.collection_name }}</p>
+        <div class="gold-line" aria-hidden="true"></div>
+      </section>
+
+      <section class="meta-grid section-pad" aria-label="Datos principales de la pieza">
+        <div class="meta-item">
+          <p class="meta-label">Diseñador</p>
+          <p class="meta-value">{{ passport()!.brand.designer_name }}</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Codigo de la pieza</p>
+          <p class="meta-value">{{ passport()!.piece.digital_passport }}</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Categoria</p>
+          <p class="meta-value">{{ formatCategories(passport()!.piece.category) }}</p>
+        </div>
+        <div class="meta-item">
+          <p class="meta-label">Temporada</p>
+          <p class="meta-value">{{ formatSeason(passport()!.piece.season) }}</p>
+        </div>
+      </section>
+
+      <section class="fields section-pad" aria-label="Información detallada de la pieza">
+        <div class="field-row">
+          <div class="field-label-wrap">
+            <p class="field-label">País y ciudad de creación</p>
+          </div>
+
+          <div class="field-body">
+            <p class="field-text">{{ formatLocation(passport()!.piece.origin) }}</p>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-label-wrap">
+            <p class="field-label">Quién la confeccionó</p>
+          </div>
+
+          <div class="field-body">
+            <p class="field-text">
+              {{ passport()!.piece.makers }}
+            </p>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-label-wrap">
+            <p class="field-label">Fecha de confección</p>
+          </div>
+
+          <div class="field-body">
+            <p class="field-text">
+              {{ formatDate(passport()!.piece.date_of_creation) }}
+            </p>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-label-wrap">
+            <p class="field-label">Descripción corta</p>
+          </div>
+
+          <div class="field-body">
+            <p class="field-text">
+              {{ passport()!.piece.description }}
+            </p>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-label-wrap">
+            <p class="field-label">Materiales utilizados y Origen</p>
+          </div>
+
+          <div class="field-body">
+            <div class="hierarchy-tree">
+              @for (materialOrigins of materialOrigins(); track materialOrigins) {
+                <div class="country-group">
+                  <div class="country-node">{{ materialOrigins.country }}</div>
+                  <ul class="material-list">
+                    @for (materialName of materialOrigins.materials; track materialName) {
+                      <li>{{ materialName }}</li>
+                    }
+                  </ul>
+                </div>
+              }
+            </div>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-label-wrap">
+            <p class="field-label">Cantidad producida</p>
+          </div>
+
+          <div class="field-body">
+            <p class="field-text">
+              {{ formatQuantity(passport()!.piece.quantity_produced) }}
+            </p>
+            <p class="field-text">
+              @if (passport()!.piece.quantity_note) {
+                {{ passport()!.piece.quantity_note }}
+              }
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="chain section-pad" aria-label="Verificación en blockchain">
+        <p class="hash-line">
+          <span class="hash-label">Hash</span>
+          <span class="dot-separator">·</span>
+          <span class="mono">{{ passport()!.piece.blockchain.hash }}</span>
+          <span class="dot-separator">·</span>
+          <span class="hash-label">Bloque</span>
+          <span class="mono">{{ passport()!.piece.blockchain.block }}</span>
+        </p>
+
+        <div class="status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <p class="status-text">{{ statusLabel }}</p>
+        </div>
+      </section>
+
+      <section class="verify section-pad">
+        <a
+          class="verify-button"
+          href="{{ passport()!.piece.blockchain.block_chain_url }}"
+          target="_blank"
+        >
+          <span>Verificar en Blockchain</span>
+        </a>
+      </section>
+    </article>
+  </main>
+} @else {}
