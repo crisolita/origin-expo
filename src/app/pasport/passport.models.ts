@@ -78,7 +78,7 @@ export type PiecePrimitive = UuidEntityBasePrimitive & {
   origin: OriginPieceLocationRecord;
   materials: {
     name: string;
-    suppliers: Omit<MaterialSuppliersLocationRecord, 'city'>[];
+    suppliers: MaterialSuppliersLocationRecord[];
   }[];
   quantity_produced: number;
   quantity_note?: string;
@@ -89,6 +89,7 @@ export type PiecePrimitive = UuidEntityBasePrimitive & {
     blockchain_certificate?: string;
     block?: string;
     block_chain_url?: string;
+    block_chain_cert_url?: string;
   };
   metadataUrl?: string;
   registeredAt?: string;
@@ -100,7 +101,10 @@ export type OriginPieceLocationRecord = LocationRecord & {
   piece?: PiecePrimitive;
 };
 
-export type MaterialSuppliersLocationRecord = OriginPieceLocationRecord;
+export type MaterialSuppliersLocationRecord = Omit<OriginPieceLocationRecord, 'city'> & {
+  provider?: string;
+  city?: string;
+};
 
 export type BrandPrimitive = UuidEntityBasePrimitive & {
   user_uuid: string;

@@ -17,10 +17,13 @@ export class Passport {
     const materialOriginMap = new Map<string, string[]>();
     this.passport()!.piece.materials.forEach((material) => {
       material.suppliers.forEach((supplier) => {
+        let materialFormatedData = material.name;
+        if (supplier.city) materialFormatedData += ` • ${supplier.city}`;
+        if (supplier.provider) materialFormatedData += ` •   ${supplier.provider}`;
         if (!materialOriginMap.has(supplier.country)) {
-          materialOriginMap.set(supplier.country, [material.name]);
+          materialOriginMap.set(supplier.country, [materialFormatedData]);
         } else {
-          materialOriginMap.get(supplier.country)!.push(material.name);
+          materialOriginMap.get(supplier.country)!.push(materialFormatedData);
         }
       });
     });

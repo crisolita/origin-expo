@@ -92,12 +92,15 @@
 
           <div class="field-body">
             <div class="hierarchy-tree">
-              @for (materialOrigins of materialOrigins(); track materialOrigins) {
+              @for (materialOrigin of materialOrigins(); track materialOrigin) {
                 <div class="country-group">
-                  <div class="country-node">{{ materialOrigins.country }}</div>
+                  <div class="country-node">{{ materialOrigin.country }}</div>
                   <ul class="material-list">
-                    @for (materialName of materialOrigins.materials; track materialName) {
-                      <li>{{ materialName }}</li>
+                    @for (
+                      materialFormatedName of materialOrigin.materials;
+                      track materialFormatedName
+                    ) {
+                      <li>{{ materialFormatedName }}</li>
                     }
                   </ul>
                 </div>
@@ -147,6 +150,13 @@
           target="_blank"
         >
           <span>Verificar en Blockchain</span>
+        </a>
+        <a
+          class="verify-button"
+          href="{{ passport()!.piece.blockchain.block_chain_cert_url }}"
+          target="_blank"
+        >
+          <span>Ver Certificado</span>
         </a>
       </section>
     </article>
