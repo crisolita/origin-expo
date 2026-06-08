@@ -131,9 +131,10 @@
         <p class="hash-line">
           <span class="hash-label">Hash</span>
           <span class="dot-separator">·</span>
-          <span class="mono">{{ passport()!.piece.blockchain.hash }}</span>
+          <span class="mono">{{ formattedHash() }}</span>
           <span class="dot-separator">·</span>
           <span class="hash-label">Bloque</span>
+          <span class="dot-separator">·</span>
           <span class="mono">{{ passport()!.piece.blockchain.block }}</span>
         </p>
 

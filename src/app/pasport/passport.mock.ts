@@ -15,9 +15,12 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       date_of_creation: '2025-08-01 16:00:08.201000',
       makers: 'ROBIN MORALES ATELIER',
       blockchain: {
-        block: '454654654654321',
-        hash: '25-FW-34',
-        blockchain_certificate: '54654656546598798',
+        block: '39768137',
+        hash: '0x87166a96a40a3945984f5ffb921aa522f0408e6bebc9c1a149bc69416f468cee',
+        block_chain_cert_url:
+          'https://gateway.pinata.cloud/ipfs/bafybeihx73loqpxslqhn7aiyqzjpantj57y5slfbzsihnmgqxxtwpvnj6q',
+        block_chain_url:
+          'https://amoy.polygonscan.com/tx/0x87166a96a40a3945984f5ffb921aa522f0408e6bebc9c1a149bc69416f468cee',
       },
       uuid: 'piece-robin-morales-look-23',
       user_uuid: 'user-robin-morales',
@@ -118,9 +121,12 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       makers:
         'Taller VF. Artesanos: Marliover Uzcategui, Jose Abello, Alexander Arteaga, Andreina Centeno.',
       blockchain: {
-        block: '454654654654321',
-        hash: 'TORB13GEN00020116MDM11',
-        blockchain_certificate: '54654656546598798',
+        block: '39768390',
+        hash: '0xb2e5dac537462f9ae350af45e751212f0d233bdeb3d9ec3834b2f31799eed975',
+        block_chain_cert_url:
+          'https://gateway.pinata.cloud/ipfs/bafybeigp65yvd4tkt6fvywrotveqwtvc4vkvvpaim44no2smoosbcpdjhq',
+        block_chain_url:
+          'https://amoy.polygonscan.com/tx/0xb2e5dac537462f9ae350af45e751212f0d233bdeb3d9ec3834b2f31799eed975',
       },
       uuid: 'piece-vanessa-farina-genesis-bag',
       user_uuid: 'user-vanessa-farina',
@@ -220,9 +226,12 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       date_of_creation: '2023-06-01 16:00:08.201000',
       makers: 'Leibrigui Primo y Verónica Rivas.',
       blockchain: {
-        block: '454654654654321',
-        hash: 'VDS-AP-CH-COR-TS1',
-        blockchain_certificate: '54654656546598798',
+        block: '39768505',
+        hash: '0xe92353a95f826008eabc8ad53a6fd274340880220002e942a11c937d4f6b6095',
+        block_chain_cert_url:
+          'https://gateway.pinata.cloud/ipfs/bafybeifv4ohpn32yjdnescih2cqhuuz3c6t3dixim3zak5uynnq6btwzim',
+        block_chain_url:
+          'https://amoy.polygonscan.com/tx/0xe92353a95f826008eabc8ad53a6fd274340880220002e942a11c937d4f6b6095',
       },
       uuid: 'piece-vds-100-anos-chevron',
       user_uuid: 'user-vistete-de-suenos',
@@ -335,7 +344,6 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       blockchain: {
         block: '454654654654321',
         hash: 'VJ2DNT01981H0',
-        blockchain_certificate: '54654656546598798',
       },
       uuid: 'piece-tarbay-danto-necklace-1',
       user_uuid: 'user-tarbay',
@@ -397,7 +405,6 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       blockchain: {
         block: '454654654654321',
         hash: 'VG1TTE05981MM',
-        blockchain_certificate: '54654656546598798',
       },
       uuid: 'piece-tarbay-gossypium-tote-bag',
       user_uuid: 'user-tarbay',
@@ -449,7 +456,6 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       blockchain: {
         block: '454654654654321',
         hash: 'B1182',
-        blockchain_certificate: '54654656546598798',
       },
       uuid: 'piece-yb-jacinta-bustier',
       user_uuid: 'user-yenny-bastida',
@@ -518,7 +524,6 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       blockchain: {
         block: '454654654654321',
         hash: 'B1178',
-        blockchain_certificate: '54654656546598798',
       },
       uuid: 'piece-yb-tapiz-skirt',
       user_uuid: 'user-yenny-bastida',

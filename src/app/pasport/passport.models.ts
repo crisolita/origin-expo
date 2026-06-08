@@ -86,7 +86,6 @@ export type PiecePrimitive = UuidEntityBasePrimitive & {
   passport_status: PassportStatus;
   blockchain: {
     hash?: string;
-    blockchain_certificate?: string;
     block?: string;
     block_chain_url?: string;
     block_chain_cert_url?: string;

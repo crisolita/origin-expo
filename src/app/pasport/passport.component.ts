@@ -17,13 +17,13 @@ export class Passport {
     const materialOriginMap = new Map<string, string[]>();
     this.passport()!.piece.materials.forEach((material) => {
       material.suppliers.forEach((supplier) => {
-        let materialFormatedData = material.name;
-        if (supplier.city) materialFormatedData += ` • ${supplier.city}`;
-        if (supplier.provider) materialFormatedData += ` •   ${supplier.provider}`;
+        let materialFormattedData = material.name;
+        if (supplier.city) materialFormattedData += ` • ${supplier.city}`;
+        if (supplier.provider) materialFormattedData += ` •   ${supplier.provider}`;
         if (!materialOriginMap.has(supplier.country)) {
-          materialOriginMap.set(supplier.country, [materialFormatedData]);
+          materialOriginMap.set(supplier.country, [materialFormattedData]);
         } else {
-          materialOriginMap.get(supplier.country)!.push(materialFormatedData);
+          materialOriginMap.get(supplier.country)!.push(materialFormattedData);
         }
       });
     });
@@ -32,6 +32,13 @@ export class Passport {
       materials,
     }));
   });
+
+  formattedHash = computed(() => {
+    const hash = this.passport()!.piece.blockchain.hash;
+    if (!hash) return '-';
+    return `${hash.slice(0, 6)}...${hash.slice(-4)}`;
+  });
+
   formatPieceName(value?: string): string {
     if (!value) {
       return '—';
