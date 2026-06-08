@@ -342,8 +342,12 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       date_of_creation: '2025-12-01 09:00:00.000000',
       makers: 'ATELIER TARBAY en la Isla de Margarita',
       blockchain: {
-        block: '454654654654321',
-        hash: 'VJ2DNT01981H0',
+        block: '39800557',
+        hash: '0xcd075bea0e0d78e2a70a65101b080ae7606873ed4a30e8eec8ea2fa563c28d43',
+        block_chain_url:
+          'https://amoy.polygonscan.com/tx/0xcd075bea0e0d78e2a70a65101b080ae7606873ed4a30e8eec8ea2fa563c28d43',
+        block_chain_cert_url:
+          'https://gateway.pinata.cloud/ipfs/bafkreigdh642g3ejot5xbxhowrd6ltkws6wz27s7jt7sdpwh5xudv25z7q',
       },
       uuid: 'piece-tarbay-danto-necklace-1',
       user_uuid: 'user-tarbay',
@@ -403,8 +407,12 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       date_of_creation: '2026-01-01 09:00:00.000000',
       makers: 'ATELIER TARBAY en la Isla de Margarita',
       blockchain: {
-        block: '454654654654321',
-        hash: 'VG1TTE05981MM',
+        block: '39800653',
+        hash: '0x4c0e4f5a5bc023338f1ddfb03f30cde357caef5deedae1a302658f681ec3b00c',
+        block_chain_cert_url:
+          'https://gateway.pinata.cloud/ipfs/bafybeiglr34t5oirpnk2suifs5n3uurpywsx6w7gwdwntjoa2spm33ijha',
+        block_chain_url:
+          'https://amoy.polygonscan.com/tx/0x4c0e4f5a5bc023338f1ddfb03f30cde357caef5deedae1a302658f681ec3b00c',
       },
       uuid: 'piece-tarbay-gossypium-tote-bag',
       user_uuid: 'user-tarbay',
