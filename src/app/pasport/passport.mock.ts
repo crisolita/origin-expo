@@ -462,8 +462,12 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       makers:
         'Edyth (corte), Ana Julia (confección), María Esther (finalización). Nestor y Lily (tejido artesanal).',
       blockchain: {
-        block: '454654654654321',
-        hash: 'B1182',
+        block: '39817923',
+        hash: '0x33db842a7b22bd74bab6603b1636c70b9c2cc0d59591a5141d3014170cccca31',
+        block_chain_cert_url:
+          'https://gateway.pinata.cloud/ipfs/bafybeiaci5q2knp3w3tdbgkiq6m3zlluma6bbxdkhsarcskuybanx2smi4',
+        block_chain_url:
+          'https://amoy.polygonscan.com/tx/0x33db842a7b22bd74bab6603b1636c70b9c2cc0d59591a5141d3014170cccca31',
       },
       uuid: 'piece-yb-jacinta-bustier',
       user_uuid: 'user-yenny-bastida',
@@ -530,8 +534,12 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       makers:
         'Edyth (corte), Ana Julia (confección), María Esther (finalización). Nestor y Lily (tejido artesanal).',
       blockchain: {
-        block: '454654654654321',
-        hash: 'B1178',
+        block: '39818117',
+        hash: '0xfd821f26618763968b808ba25cf3eb98c22d0b6cc74531d799b7b90cd7d93e45',
+        block_chain_cert_url:
+          'https://gateway.pinata.cloud/ipfs/bafybeiennhxykfljl3c2vuog3ivh7thdgqkcwi5btxowea4joaviu7qriu',
+        block_chain_url:
+          'https://amoy.polygonscan.com/tx/0xfd821f26618763968b808ba25cf3eb98c22d0b6cc74531d799b7b90cd7d93e45',
       },
       uuid: 'piece-yb-tapiz-skirt',
       user_uuid: 'user-yenny-bastida',
