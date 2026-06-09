@@ -70,33 +70,15 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
         },
         {
           name: '1 cremallera invisible',
-          suppliers: [
-            {
-              id: 4,
-              piece_uuid: 'piece-robin-morales-look-23',
-              country: 'Venezuela',
-            },
-          ],
+          suppliers: [],
         },
         {
           name: '1 gafete',
-          suppliers: [
-            {
-              id: 5,
-              piece_uuid: 'piece-robin-morales-look-23',
-              country: 'Venezuela',
-            },
-          ],
+          suppliers: [],
         },
         {
           name: '4 mts crin de 3 cm',
-          suppliers: [
-            {
-              id: 6,
-              piece_uuid: 'piece-robin-morales-look-23',
-              country: 'Venezuela',
-            },
-          ],
+          suppliers: [],
         },
       ],
       quantity_produced: 1,
@@ -342,13 +324,7 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
         },
         {
           name: '14K Gold-Filled',
-          suppliers: [
-            {
-              id: 21,
-              piece_uuid: 'piece-tarbay-danto-necklace-1',
-              country: 'EE.UU.',
-            },
-          ],
+          suppliers: [],
         },
       ],
       quantity_produced: 8,
