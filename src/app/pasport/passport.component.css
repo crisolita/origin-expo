@@ -188,115 +188,30 @@ body {
   font-style: italic;
   line-height: 1.65;
 }
-
-/* ========================================================================== */
-.hierarchy-tree {
+.materials {
   display: flex;
-  flex-direction: column;
-  gap: 32px;
-  max-width: 100%;
-  margin: 20px 0;
+  gap: 2px;
+  flex-wrap: wrap;
+  align-content: center;
 }
 
-.country-group {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 100%;
-}
-
-.country-node {
-  background: #ffffff !important;
-  color: #063932 !important;
-  padding: 10px 16px;
-  border-radius: 6px;
-  font-weight: 700;
+.material {
+  color: rgb(6, 57, 50);
+  border: 1px solid rgb(177, 143, 45);
+  align-content: center;
+  border-radius: 10px;
+  padding: 4px 12px;
   font-size: 11px;
   text-transform: uppercase;
-  z-index: 2;
-  min-width: 110px;
-  text-align: center;
-  position: relative;
-  border-left: 4px solid #b18f2d;
-  box-shadow: 0 4px 14px rgba(35, 33, 26, 0.06) !important;
-}
-.country-node::after {
-  content: '';
-  position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 25px;
-  height: 2px;
-  background: var(--line);
-  z-index: 1;
-}
-.country-group::before {
-  display: none !important;
-}
-.country-group::before,
-.material-list::before,
-.material-list li::before {
-  content: '';
-  position: absolute;
-  background: #063932;
+  letter-spacing: 0.05em;
+  background: rgba(6, 57, 50, 0.03);
+  transition: all 0.2s ease;
 }
 
-.country-group::before {
-  left: 120px;
-  top: 50%;
-  width: 25px;
-  height: 2px;
-  z-index: 1;
+.material:hover {
+  background: rgba(177, 143, 45, 0.1);
 }
 
-.material-list::before {
-  left: 12px;
-  top: 14px;
-  bottom: 14px;
-  width: 2px;
-}
-.material-list {
-  list-style: none;
-  padding-left: 25px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  position: relative;
-  justify-content: center;
-}
-
-.material-list:has(li:only-child)::before {
-  display: none;
-}
-
-.material-list li {
-  position: relative;
-  background: var(--mat);
-  color: var(--country);
-  padding: 6px 14px;
-  border-radius: 4px;
-  font-weight: 500;
-  font-size: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-  border: 1px solid #b18f2d;
-  min-width: 140px;
-}
-
-.material-list li::before {
-  left: -13px;
-  top: 50%;
-  width: 13px;
-  height: 2px;
-}
-
-.material-list li:only-child::before {
-  left: -25px;
-  width: 25px;
-}
-
-/* ========================================================================== */
 .chain {
   padding-top: 24px;
   padding-bottom: 24px;

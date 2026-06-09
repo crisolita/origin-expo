@@ -87,25 +87,32 @@
 
         <div class="field-row">
           <div class="field-label-wrap">
-            <p class="field-label">Materiales utilizados y Origen</p>
+            <p class="field-label">Materiales utilizados</p>
           </div>
 
-          <div class="field-body">
-            <div class="hierarchy-tree">
-              @for (materialOrigin of materialOrigins(); track materialOrigin) {
-                <div class="country-group">
-                  <div class="country-node">{{ materialOrigin.country }}</div>
-                  <ul class="material-list">
-                    @for (
-                      materialFormatedName of materialOrigin.materials;
-                      track materialFormatedName
-                    ) {
-                      <li>{{ materialFormatedName }}</li>
-                    }
-                  </ul>
-                </div>
-              }
-            </div>
+          <div class="field-body materials">
+            @for (material of materials(); track material) {
+              <div class="material">
+                {{ material }}
+              </div>
+            }
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field-label-wrap">
+            <p class="field-label">Origen de los Materiales</p>
+          </div>
+
+          <div class="field-body materials">
+            @for (materialOrigin of materialsOrigin(); track materialOrigin) {
+              <div class="material">
+                {{ materialOrigin.country }}
+                @if (materialOrigin.city) {
+                  - {{ materialOrigin.city }}
+                }
+              </div>
+            }
           </div>
         </div>
 

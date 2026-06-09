@@ -250,19 +250,18 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       },
       materials: [
         {
-          name: 'Tafetán de seda (avance de colección Carolina Herrera 2020)',
+          name: 'Tafetán de seda',
           suppliers: [
             {
               id: 13,
               piece_uuid: 'piece-vds-100-anos-chevron',
               country: 'EE.UU.',
-              city: 'Nueva York',
-              provider: 'Carolina Herrera (Sobrantes de producción) ',
+              city: 'Nueva York (Retazos marca Carolina Herrera.)',
             },
           ],
         },
         {
-          name: 'Encaje blonda (avance de fábrica Van Ralte)',
+          name: 'Encaje blonda',
           suppliers: [
             {
               id: 14,
@@ -273,53 +272,19 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
         },
         {
           name: 'Neopreno',
-          suppliers: [
-            {
-              id: 15,
-              piece_uuid: 'piece-vds-100-anos-chevron',
-              country: 'Venezuela',
-            },
-          ],
+          suppliers: [],
         },
         {
           name: 'Drill de algodón',
-          suppliers: [
-            {
-              id: 16,
-              piece_uuid: 'piece-vds-100-anos-chevron',
-              country: 'Venezuela',
-            },
-          ],
+          suppliers: [],
         },
         {
           name: 'Microfibra',
-          suppliers: [
-            {
-              id: 17,
-              piece_uuid: 'piece-vds-100-anos-chevron',
-              country: 'Venezuela',
-            },
-          ],
+          suppliers: [],
         },
         {
-          name: 'Varillas metálicas',
-          suppliers: [
-            {
-              id: 18,
-              piece_uuid: 'piece-vds-100-anos-chevron',
-              country: 'Venezuela',
-            },
-          ],
-        },
-        {
-          name: 'Sesgos (avances del Taller Verónica Rivas)',
-          suppliers: [
-            {
-              id: 19,
-              piece_uuid: 'piece-vds-100-anos-chevron',
-              country: 'Venezuela',
-            },
-          ],
+          name: 'Sesgos',
+          suppliers: [],
         },
       ],
       quantity_produced: 1,
@@ -372,7 +337,6 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
               id: 20,
               piece_uuid: 'piece-tarbay-danto-necklace-1',
               country: 'Varios',
-              provider: 'Gemas del mundo',
             },
           ],
         },
@@ -486,29 +450,32 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       },
       materials: [
         {
-          name: 'Tela Popelina y Algodon',
+          name: 'Popelina Deadstock LVMH',
           suppliers: [
             {
               id: 23,
               piece_uuid: 'piece-yb-jacinta-bustier',
               country: 'Francia',
-              provider: 'Deadstock de LVMH',
             },
+          ],
+        },
+        {
+          name: 'Algodón',
+          suppliers: [
             {
-              id: 24,
+              id: 33,
               piece_uuid: 'piece-yb-jacinta-bustier',
               country: 'Venezuela',
             },
           ],
         },
         {
-          name: 'Cierres de metal',
+          name: 'Cierre de metal',
           suppliers: [
             {
               id: 25,
               piece_uuid: 'piece-yb-jacinta-bustier',
               country: 'Colombia',
-              provider: 'YKK',
             },
           ],
         },
@@ -558,29 +525,33 @@ export const PASSPORT_MOCKS: PassportMockRecord[] = [
       },
       materials: [
         {
-          name: 'Tela Popelina y denim stretch',
+          name: 'Denim stretch',
           suppliers: [
             {
               id: 26,
               piece_uuid: 'piece-yb-tapiz-skirt',
               country: 'Francia',
-              provider: 'Deadstock de LVMH',
             },
+          ],
+        },
+
+        {
+          name: 'Algodón',
+          suppliers: [
             {
-              id: 27,
+              id: 263,
               piece_uuid: 'piece-yb-tapiz-skirt',
               country: 'Venezuela',
             },
           ],
         },
         {
-          name: 'Cierres de metal',
+          name: 'Cierre de metal',
           suppliers: [
             {
               id: 28,
               piece_uuid: 'piece-yb-tapiz-skirt',
               country: 'Colombia',
-              provider: 'YKK',
             },
           ],
         },
